@@ -1,8 +1,4 @@
 import whyGradient from "../assets/why-gradient.svg";
-import innovation from "../assets/innovation.webp";
-import transparency from "../assets/transparency.webp";
-import reliability from "../assets/relaibility.webp";
-import scalability from "../assets/scalabilty.webp";
 import {SplineScene} from "../utils/SplineScene";
 import {
   motion,
