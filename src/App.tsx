@@ -7,6 +7,7 @@ import FirstCTA from "./components/first-cta";
 import WhyUs from "./components/why-us";
 import SecondCTA from "./components/second-cta";
 import SmoothScrolling from "./components/smooth-scrolling";
+import { Testimonials } from "./components/testimonials";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Features />
         <FirstCTA />
         <WhyUs />
+        {/* <Testimonials /> */}
         <SecondCTA />
         <Footer />
       </main>

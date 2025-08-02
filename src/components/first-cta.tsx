@@ -8,7 +8,10 @@ import { motion } from "framer-motion";
 
 const FirstCTA = () => {
   return (
-    <section id="resources" className="overflow-y-c lip relative flex h-[750px] w-full items-start justify-center bg-[#131316] px-6 md:h-[900px] md:px-10 lg:h-[592px] lg:items-center xl:px-[159px]">
+    <section
+      id="resources"
+      className="overflow-y-c lip relative flex h-[750px] w-full items-start justify-center bg-[#131316] px-6 md:h-[900px] md:px-10 lg:h-[592px] lg:items-center xl:px-[159px]"
+    >
       <div className="absolute bottom-0 left-0 right-0 top-0 mx-auto my-auto h-[425px] w-full rounded-full bg-white blur-[350px] sm:w-[425px]" />
 
       <div className="relative h-[750px] w-full md:h-[900px] lg:h-[592px] 3xl:max-w-[1200px]">
@@ -66,10 +69,11 @@ const FirstCTA = () => {
               amount: "some",
               once: true,
             }}
-            className="mt-8 flex h-[56px] w-[190px] relative group overflow-hidden items-center justify-center gap-3 rounded-full bg-white text-base font-medium leading-[28px] text-[#314155] shadow-[0_1px_2px_0_rgba(14,24,41,0.05)] md:mt-12 md:h-[60px] md:w-[202px] md:text-[18px]"
-          ><div className="absolute -left-1 bottom-0 right-0 z-10 !mx-auto h-[0px] w-[207px] rounded-full bg-black transition-all duration-300 group-hover:h-[61px]" />
-            <span className="group-hover:text-white z-10">Discover More</span>
-            <img src={arrow} alt="" className="group-hover:invert z-10" />
+            className="group relative mt-8 flex h-[56px] w-[190px] items-center justify-center gap-3 overflow-hidden rounded-full bg-white text-base font-medium leading-[28px] text-[#314155] shadow-[0_1px_2px_0_rgba(14,24,41,0.05)] md:mt-12 md:h-[60px] md:w-[202px] md:text-[18px]"
+          >
+            <div className="absolute -left-1 bottom-0 right-0 z-10 !mx-auto h-[0px] w-[207px] rounded-full bg-black transition-all duration-300 group-hover:h-[61px]" />
+            <span className="z-10 group-hover:text-white">Discover More</span>
+            <img src={arrow} alt="" className="z-10 group-hover:invert" />
           </motion.button>
         </div>
 
@@ -102,6 +106,17 @@ const FirstCTA = () => {
                 delay: 0.2,
               },
             }}
+            animate={{
+              x: [12, -12],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 3,
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             viewport={{
               amount: "some",
               once: true,
@@ -123,6 +138,17 @@ const FirstCTA = () => {
                 delay: 0.2,
               },
             }}
+            animate={{
+              x: [-12, 12],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 3,
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             viewport={{
               amount: "some",
               once: true,
@@ -144,6 +170,17 @@ const FirstCTA = () => {
                 delay: 0.2,
               },
             }}
+            animate={{
+              x: [12, -12],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 3,
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             viewport={{
               amount: "some",
               once: true,
@@ -165,6 +202,17 @@ const FirstCTA = () => {
                 delay: 0.2,
               },
             }}
+            animate={{
+              x: [-12, 12],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 3,
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             viewport={{
               amount: "some",
               once: true,
@@ -210,19 +258,12 @@ const FirstCTA = () => {
             amount: "some",
             once: true,
           }}
-          className="md:-bottom-[50 px] lg:righ t-[149px] absolute -bottom-[0px] left-0 right-0 z-30 flex h-[400px] w-full flex-col justify-start -space-y-[140px] overflow-clip sm:h-[500px] sm:-space-y-[290px] md:left-auto md:right-[50px] md:h-[500px] md:w-auto md:-space-y-[320px] lg:right-0 lg:h-[650px] lg:-space-y-[290px] xl:hidden xl:-space-y-0"
+          className="lg:righ t-[149px] absolute -bottom-[0px] left-0 right-0 z-30 flex h-[400px] w-full flex-col justify-start -space-y-[140px] overflow-clip sm:h-[500px] sm:-space-y-[290px] md:left-auto md:right-[50px] md:h-[500px] md:w-auto md:-space-y-[320px] lg:right-0 lg:h-[650px] lg:-space-y-[290px] xl:hidden xl:-space-y-0"
         >
+          {/* max-[400px]:-bottom-[-10px]  */}
           <img src={cardFour} alt="" className="z-[12]" />
-          <img
-            src={cardThree}
-            alt=""
-            className="rotate -[-30deg] z-[11]"
-          />
-          <img
-            src={cardTwo}
-            alt=""
-            className="z-[10]"
-          />
+          <img src={cardThree} alt="" className="rotate -[-30deg] z-[11]" />
+          <img src={cardTwo} alt="" className="z-[10]" />
           <img src={cardOne} alt="" className="" />
           <img src={shadow} alt="" className="" />
         </motion.div>

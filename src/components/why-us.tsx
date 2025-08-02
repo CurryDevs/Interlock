@@ -3,6 +3,7 @@ import innovation from "../assets/innovation.webp";
 import transparency from "../assets/transparency.webp";
 import reliability from "../assets/relaibility.webp";
 import scalability from "../assets/scalabilty.webp";
+import {SplineScene} from "../utils/SplineScene";
 import {
   motion,
   useMotionValueEvent,
@@ -59,27 +60,11 @@ const WhyUs = () => {
             amount: "some",
             once: true,
           }}
-          className="relative z-10 h-[350px] w-full object-cover sm:h-[450px] md:h-[591px] md:min-w-[400px] xl:min-w-[592px]"
+          className="relative max-[768px]:hidden z-10 h-full w-full object-cover sm:h-[450px] md:h-[591px] md:min-w-[400px] xl:min-w-[592px]"
         >
-          <img
-            src={innovation}
-            alt=""
-            className={`absolute z-[13] h-full w-full scale-[1.01] object-cover transition-all duration-300 ${position === 1 ? "opacity-100" : "opacity-0"}`}
-          />
-          <img
-            src={transparency}
-            alt=""
-            className={`absolute z-[12] h-full w-full scale-[1.005] object-cover transition-all duration-300 ${position <= 2 ? "opacity-100" : "opacity-0"}`}
-          />
-          <img
-            src={reliability}
-            alt=""
-            className={`absolute z-[11] h-full w-full object-cover transition-all duration-300 ${position <= 3 ? "opacity-100" : "opacity-0"}`}
-          />
-          <img
-            src={scalability}
-            alt=""
-            className={`absolute z-[10] h-full w-full object-cover transition-all duration-300 ${position <= 4 ? "opacity-100" : "opacity-100"}`}
+          <SplineScene
+            scene="https://prod.spline.design/7OxTdCevrdyt9O8F/scene.splinecode"
+            className="scale-[0.9]"
           />
         </motion.div>
 
